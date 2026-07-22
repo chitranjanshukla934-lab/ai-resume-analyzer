@@ -19,7 +19,7 @@ st.set_page_config(
 )
 
 # =====================================================
-# CUSTOM CSS
+# PREMIUM DARK UI
 # =====================================================
 
 st.markdown("""
@@ -29,16 +29,16 @@ st.markdown("""
 
 .stApp {
     background:
-        radial-gradient(circle at 10% 0%, rgba(61, 80, 190, 0.25), transparent 30%),
-        radial-gradient(circle at 90% 0%, rgba(132, 67, 190, 0.20), transparent 30%),
+        radial-gradient(circle at 8% 0%, rgba(70, 92, 210, 0.22), transparent 28%),
+        radial-gradient(circle at 92% 5%, rgba(139, 76, 205, 0.18), transparent 30%),
         #080b14;
     color: #f5f7ff;
     font-family: 'DM Sans', sans-serif;
 }
 
 #MainMenu,
-footer,
-header {
+header,
+footer {
     visibility: hidden;
 }
 
@@ -48,39 +48,54 @@ header {
     padding-bottom: 4rem;
 }
 
-/* NAVBAR */
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 17px 23px;
+    padding: 17px 24px;
+    margin-bottom: 58px;
     border-radius: 18px;
-    background: rgba(18, 23, 40, 0.75);
-    border: 1px solid rgba(255,255,255,0.09);
-    margin-bottom: 55px;
+    background: rgba(17, 22, 39, 0.78);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
 }
 
 .logo {
     font-size: 24px;
     font-weight: 800;
-    color: white;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
 .logo span {
-    color: #8292ff;
+    color: #8b9aff;
 }
 
 .nav-badge {
+    color: #b5beff;
     font-size: 12px;
-    color: #b2bcff;
     padding: 8px 15px;
     border-radius: 999px;
     background: rgba(124,140,255,0.10);
-    border: 1px solid rgba(124,140,255,0.25);
+    border: 1px solid rgba(124,140,255,0.24);
 }
 
-/* HERO */
+/* =====================================================
+   WELCOME HERO
+===================================================== */
+
+.welcome-label {
+    text-align: center;
+    color: #8d9aff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
 
 .hero {
     text-align: center;
@@ -89,89 +104,155 @@ header {
 }
 
 .hero h1 {
-    font-size: 60px;
-    line-height: 1.08;
-    letter-spacing: -2.5px;
-    color: white;
-    margin-bottom: 20px;
+    font-size: 62px;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    color: #ffffff;
+    margin-bottom: 24px;
 }
 
 .hero h1 span {
-    background: linear-gradient(90deg, #8c9cff, #c487ff);
+    background: linear-gradient(90deg, #8f9eff, #c88aff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero p {
+    color: #929bb1;
     font-size: 18px;
-    line-height: 1.7;
-    color: #929bb2;
+    line-height: 1.75;
+    max-width: 780px;
+    margin: auto;
 }
 
 .hero-line {
     height: 3px;
-    width: 70px;
-    background: linear-gradient(90deg, #7285ff, #bd77ff);
-    border-radius: 5px;
-    margin: 27px auto 0;
+    width: 75px;
+    margin: 30px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #7186ff, #c179ff);
 }
 
-/* SECTION */
+/* =====================================================
+   FEATURE SECTION
+===================================================== */
 
 .section-heading {
     text-align: center;
-    margin: 55px 0 25px;
+    margin: 65px 0 28px;
 }
 
 .section-heading h2 {
-    font-size: 26px;
-    color: white;
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .section-heading p {
-    color: #7e889e;
+    color: #7f899f;
+    font-size: 15px;
 }
 
-/* FEATURES */
+/* =====================================================
+   FEATURE CARDS
+===================================================== */
 
 .feature-card {
-    min-height: 175px;
-    padding: 27px;
-    border-radius: 20px;
-    background: rgba(18, 23, 40, 0.78);
+    min-height: 205px;
+    padding: 30px;
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(27, 34, 59, 0.96),
+            rgba(12, 16, 29, 0.96)
+        );
     border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.35s ease;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -85px;
+    top: -85px;
+    border-radius: 50%;
+    background: rgba(120, 135, 255, 0.12);
+    filter: blur(35px);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(137,151,255,0.55);
+    box-shadow:
+        0 22px 45px rgba(0,0,0,0.35),
+        0 0 28px rgba(105,120,255,0.10);
 }
 
 .feature-number {
-    font-size: 12px;
+    position: relative;
+    color: #8f9cff;
+    font-size: 11px;
     letter-spacing: 2px;
-    color: #8997ff;
     font-weight: 700;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
 }
 
 .feature-card h3 {
-    font-size: 18px;
-    color: #e2e6ff;
+    position: relative;
+    color: #eef0ff;
+    font-size: 19px;
+    margin-bottom: 13px;
 }
 
 .feature-card p {
-    color: #818ba3;
+    position: relative;
+    color: #858fa6;
     font-size: 14px;
-    line-height: 1.65;
+    line-height: 1.75;
 }
 
-/* UPLOAD */
+/* =====================================================
+   WORKFLOW STRIP
+===================================================== */
+
+.workflow {
+    margin-top: 45px;
+    padding: 22px 25px;
+    border-radius: 18px;
+    background: rgba(17,22,39,0.65);
+    border: 1px solid rgba(255,255,255,0.07);
+    text-align: center;
+}
+
+.workflow-text {
+    color: #8d97ad;
+    font-size: 14px;
+}
+
+.workflow-text span {
+    color: #aab4ff;
+    font-weight: 700;
+}
+
+/* =====================================================
+   UPLOAD SECTION
+===================================================== */
 
 .upload-card {
     margin-top: 50px;
     padding: 34px;
     border-radius: 24px;
-    background: linear-gradient(
-        145deg,
-        rgba(22, 28, 48, 0.96),
-        rgba(12, 16, 29, 0.96)
-    );
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22,28,48,0.96),
+            rgba(12,16,29,0.96)
+        );
     border: 1px solid rgba(255,255,255,0.10);
     box-shadow: 0 25px 80px rgba(0,0,0,0.35);
 }
@@ -184,9 +265,9 @@ header {
 }
 
 .upload-title {
+    color: #ffffff;
     font-size: 23px;
     font-weight: 700;
-    color: white;
 }
 
 .upload-subtitle {
@@ -197,14 +278,16 @@ header {
 
 .secure-badge {
     color: #7ef0bd;
-    background: rgba(74,222,128,0.08);
-    border: 1px solid rgba(74,222,128,0.18);
+    font-size: 12px;
     padding: 8px 13px;
     border-radius: 999px;
-    font-size: 12px;
+    background: rgba(74,222,128,0.08);
+    border: 1px solid rgba(74,222,128,0.18);
 }
 
-/* FILE UPLOADER */
+/* =====================================================
+   FILE UPLOADER
+===================================================== */
 
 [data-testid="stFileUploader"] {
     background: rgba(255,255,255,0.025);
@@ -213,7 +296,49 @@ header {
     padding: 22px;
 }
 
-/* BUTTON */
+[data-testid="stFileUploader"]:hover {
+    border-color: #8e9cff;
+    background: rgba(124,140,255,0.06);
+}
+
+/* =====================================================
+   FILE INFO
+===================================================== */
+
+.file-info {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.file-tag {
+    color: #aeb9ff;
+    font-size: 12px;
+    padding: 9px 14px;
+    border-radius: 9px;
+    background: rgba(124,140,255,0.08);
+    border: 1px solid rgba(124,140,255,0.18);
+}
+
+/* =====================================================
+   THANK YOU
+===================================================== */
+
+.thank-you {
+    text-align: center;
+    margin: 22px 0;
+    padding: 18px;
+    border-radius: 14px;
+    color: #9eeac2;
+    font-size: 14px;
+    background: rgba(74,222,128,0.06);
+    border: 1px solid rgba(74,222,128,0.15);
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
 
 .stButton > button {
     width: 100%;
@@ -224,41 +349,33 @@ header {
     color: white;
     font-size: 16px;
     font-weight: 700;
+    transition: all 0.25s ease;
 }
 
-/* FILE INFO */
-
-.file-info {
-    display: flex;
-    gap: 12px;
-    margin: 20px 0;
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 38px rgba(112,101,255,0.35);
 }
 
-.file-tag {
-    background: rgba(124,140,255,0.08);
-    border: 1px solid rgba(124,140,255,0.18);
-    color: #aeb9ff;
-    padding: 9px 14px;
-    border-radius: 9px;
-    font-size: 12px;
-}
-
-/* ANALYSIS */
+/* =====================================================
+   ANALYSIS RESULT
+===================================================== */
 
 .analysis-header {
     margin-top: 55px;
     padding: 30px;
     border-radius: 20px;
-    background: linear-gradient(
-        120deg,
-        rgba(73,88,196,0.32),
-        rgba(112,61,155,0.25)
-    );
+    background:
+        linear-gradient(
+            120deg,
+            rgba(73,88,196,0.32),
+            rgba(112,61,155,0.25)
+        );
     border: 1px solid rgba(144,155,255,0.20);
 }
 
 .analysis-header h2 {
-    color: white;
+    color: #ffffff;
 }
 
 .analysis-header p {
@@ -270,11 +387,12 @@ header {
     padding: 30px;
     border-radius: 20px;
     text-align: center;
-    background: linear-gradient(
-        135deg,
-        rgba(77,93,205,0.28),
-        rgba(123,65,174,0.25)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            rgba(77,93,205,0.28),
+            rgba(123,65,174,0.25)
+        );
     border: 1px solid rgba(144,155,255,0.20);
 }
 
@@ -282,12 +400,13 @@ header {
     color: #aeb9d0;
     font-size: 13px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .score-number {
+    color: #ffffff;
     font-size: 54px;
     font-weight: 800;
-    color: white;
     margin: 8px 0;
 }
 
@@ -304,6 +423,10 @@ header {
     border: 1px solid rgba(255,255,255,0.08);
     line-height: 1.8;
 }
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 .custom-footer {
     text-align: center;
@@ -332,14 +455,23 @@ st.markdown(
 
 
 # =====================================================
-# HERO
+# WELCOME HERO
 # =====================================================
 
 st.markdown(
     """
+    <div class="welcome-label">
+        WELCOME TO RESUMEIQ
+    </div>
+
     <div class="hero">
         <h1>Turn your resume into<br><span>career intelligence.</span></h1>
-        <p>Analyze your resume with Generative AI and discover strengths, skill gaps, ATS improvements, and career opportunities hidden in your profile.</p>
+
+        <p>
+            Upload your resume and let AI uncover your strengths,
+            skill gaps, ATS opportunities, and the next steps in your career.
+        </p>
+
         <div class="hero-line"></div>
     </div>
     """,
@@ -354,8 +486,8 @@ st.markdown(
 st.markdown(
     """
     <div class="section-heading">
-        <h2>Everything you need to improve your resume</h2>
-        <p>AI-powered insights designed to help you stand out.</p>
+        <h2>Make your next career move with confidence.</h2>
+        <p>Everything you need to understand and improve your resume.</p>
     </div>
     """,
     unsafe_allow_html=True
@@ -367,9 +499,12 @@ with col1:
     st.markdown(
         """
         <div class="feature-card">
-            <div class="feature-number">01</div>
-            <h3>Resume Intelligence</h3>
-            <p>Understand your resume quality, strengths, weaknesses, and professional impact.</p>
+            <div class="feature-number">01 / ANALYZE</div>
+            <h3>Understand Your Profile</h3>
+            <p>
+                Get a clear AI-powered view of your resume,
+                professional strengths, weaknesses, and overall impact.
+            </p>
         </div>
         """,
         unsafe_allow_html=True
@@ -379,9 +514,12 @@ with col2:
     st.markdown(
         """
         <div class="feature-card">
-            <div class="feature-number">02</div>
-            <h3>Skill Gap Analysis</h3>
-            <p>Discover valuable skills you already have and identify what you should learn next.</p>
+            <div class="feature-number">02 / DISCOVER</div>
+            <h3>Find Your Skill Gaps</h3>
+            <p>
+                Discover the skills you already have and identify
+                what you should learn to reach your career goals.
+            </p>
         </div>
         """,
         unsafe_allow_html=True
@@ -391,9 +529,12 @@ with col3:
     st.markdown(
         """
         <div class="feature-card">
-            <div class="feature-number">03</div>
-            <h3>ATS Readiness</h3>
-            <p>Improve your resume visibility and compatibility with modern recruitment systems.</p>
+            <div class="feature-number">03 / IMPROVE</div>
+            <h3>Become ATS Ready</h3>
+            <p>
+                Improve your resume structure and content
+                to perform better in modern hiring systems.
+            </p>
         </div>
         """,
         unsafe_allow_html=True
@@ -401,7 +542,27 @@ with col3:
 
 
 # =====================================================
-# API SETUP
+# WORKFLOW
+# =====================================================
+
+st.markdown(
+    """
+    <div class="workflow">
+        <div class="workflow-text">
+            Upload your resume
+            <span>→</span>
+            AI analyzes your profile
+            <span>→</span>
+            You discover your next career move
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+# =====================================================
+# API
 # =====================================================
 
 api_key = os.getenv("GROQ_API_KEY")
@@ -420,13 +581,23 @@ client = Groq(api_key=api_key)
 st.markdown(
     """
     <div class="upload-card">
+
         <div class="upload-header">
+
             <div>
                 <div class="upload-title">Upload your resume</div>
-                <div class="upload-subtitle">Upload a PDF and let ResumeIQ analyze your professional profile.</div>
+
+                <div class="upload-subtitle">
+                    Upload a PDF and let ResumeIQ analyze your professional profile.
+                </div>
             </div>
-            <div class="secure-badge">Secure Analysis</div>
+
+            <div class="secure-badge">
+                Secure Analysis
+            </div>
+
         </div>
+
     </div>
     """,
     unsafe_allow_html=True
@@ -439,7 +610,7 @@ uploaded_file = st.file_uploader(
 
 
 # =====================================================
-# RESUME ANALYSIS
+# RESUME PROCESSING
 # =====================================================
 
 if uploaded_file:
@@ -470,6 +641,16 @@ if uploaded_file:
 
     st.success("Resume successfully uploaded.")
 
+    st.markdown(
+        """
+        <div class="thank-you">
+            Thank you for trusting ResumeIQ with your resume.
+            Your AI-powered analysis is ready to begin.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     if st.button("Analyze Resume"):
 
         with st.spinner("AI is analyzing your resume..."):
@@ -481,7 +662,7 @@ Analyze this resume:
 
 {resume_text}
 
-Provide:
+Provide a professional and structured analysis with:
 
 1. OVERALL RESUME SCORE out of 100
 2. PROFESSIONAL SUMMARY
@@ -489,7 +670,7 @@ Provide:
 4. WEAKNESSES AND AREAS FOR IMPROVEMENT
 5. TECHNICAL SKILLS FOUND
 6. MISSING OR RECOMMENDED SKILLS
-7. THREE PROJECT SUGGESTIONS
+7. THREE RELEVANT PROJECT SUGGESTIONS
 8. ATS OPTIMIZATION SUGGESTIONS
 9. FINAL CAREER ADVICE
 
@@ -522,7 +703,9 @@ Be specific, honest, practical, and professional.
                 """
                 <div class="analysis-header">
                     <h2>Resume Analysis Report</h2>
-                    <p>AI-generated insights based on your uploaded resume.</p>
+                    <p>
+                        AI-generated insights based on your uploaded resume.
+                    </p>
                 </div>
                 """,
                 unsafe_allow_html=True
@@ -531,24 +714,42 @@ Be specific, honest, practical, and professional.
             col1, col2 = st.columns(2)
 
             with col1:
+
                 st.markdown(
                     f"""
                     <div class="score-card">
-                        <div class="score-title">Overall Resume Score</div>
-                        <div class="score-number">{score}</div>
-                        <div class="score-subtitle">Out of 100</div>
+                        <div class="score-title">
+                            Overall Resume Score
+                        </div>
+
+                        <div class="score-number">
+                            {score}
+                        </div>
+
+                        <div class="score-subtitle">
+                            Out of 100
+                        </div>
                     </div>
                     """,
                     unsafe_allow_html=True
                 )
 
             with col2:
+
                 st.markdown(
                     """
                     <div class="score-card">
-                        <div class="score-title">Analysis Status</div>
-                        <div class="score-number">AI</div>
-                        <div class="score-subtitle">Personalized insights generated</div>
+                        <div class="score-title">
+                            Analysis Status
+                        </div>
+
+                        <div class="score-number">
+                            AI
+                        </div>
+
+                        <div class="score-subtitle">
+                            Personalized career insights generated
+                        </div>
                     </div>
                     """,
                     unsafe_allow_html=True
@@ -567,8 +768,8 @@ Be specific, honest, practical, and professional.
             )
 
             st.download_button(
-                "Download Analysis Report",
-                result,
+                label="Download Analysis Report",
+                data=result,
                 file_name="ResumeIQ_Analysis_Report.txt",
                 mime="text/plain"
             )
