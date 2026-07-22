@@ -13,13 +13,13 @@ load_dotenv()
 
 st.set_page_config(
     page_title="ResumeIQ | AI Resume Intelligence",
-    page_icon="◈",
+    page_icon="📄",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
 # =====================================================
-# PREMIUM DARK UI
+# PREMIUM DARK CSS
 # =====================================================
 
 st.markdown("""
@@ -29,8 +29,8 @@ st.markdown("""
 
 .stApp {
     background:
-        radial-gradient(circle at 8% 0%, rgba(70, 92, 210, 0.22), transparent 28%),
-        radial-gradient(circle at 92% 5%, rgba(139, 76, 205, 0.18), transparent 30%),
+        radial-gradient(circle at 10% 0%, rgba(60, 80, 190, 0.22), transparent 30%),
+        radial-gradient(circle at 90% 0%, rgba(130, 70, 200, 0.18), transparent 30%),
         #080b14;
     color: #f5f7ff;
     font-family: 'DM Sans', sans-serif;
@@ -48,31 +48,27 @@ footer {
     padding-bottom: 4rem;
 }
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* NAVBAR */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 17px 24px;
-    margin-bottom: 58px;
+    margin-bottom: 55px;
     border-radius: 18px;
-    background: rgba(17, 22, 39, 0.78);
+    background: rgba(18, 23, 40, 0.80);
     border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
 }
 
 .logo {
     font-size: 24px;
     font-weight: 800;
-    color: #ffffff;
-    letter-spacing: -0.5px;
+    color: white;
 }
 
 .logo span {
-    color: #8b9aff;
+    color: #8998ff;
 }
 
 .nav-badge {
@@ -81,12 +77,10 @@ footer {
     padding: 8px 15px;
     border-radius: 999px;
     background: rgba(124,140,255,0.10);
-    border: 1px solid rgba(124,140,255,0.24);
+    border: 1px solid rgba(124,140,255,0.25);
 }
 
-/* =====================================================
-   WELCOME HERO
-===================================================== */
+/* WELCOME */
 
 .welcome-label {
     text-align: center;
@@ -107,8 +101,8 @@ footer {
     font-size: 62px;
     line-height: 1.05;
     letter-spacing: -3px;
-    color: #ffffff;
-    margin-bottom: 24px;
+    color: white;
+    margin-bottom: 22px;
 }
 
 .hero h1 span {
@@ -121,8 +115,6 @@ footer {
     color: #929bb1;
     font-size: 18px;
     line-height: 1.75;
-    max-width: 780px;
-    margin: auto;
 }
 
 .hero-line {
@@ -133,68 +125,45 @@ footer {
     background: linear-gradient(90deg, #7186ff, #c179ff);
 }
 
-/* =====================================================
-   FEATURE SECTION
-===================================================== */
+/* SECTION */
 
 .section-heading {
     text-align: center;
-    margin: 65px 0 28px;
+    margin: 60px 0 28px;
 }
 
 .section-heading h2 {
-    color: #ffffff;
+    color: white;
     font-size: 28px;
     margin-bottom: 10px;
 }
 
 .section-heading p {
     color: #7f899f;
-    font-size: 15px;
 }
 
-/* =====================================================
-   FEATURE CARDS
-===================================================== */
+/* FEATURE CARDS */
 
 .feature-card {
     min-height: 205px;
     padding: 30px;
     border-radius: 22px;
-    position: relative;
-    overflow: hidden;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(27, 34, 59, 0.96),
-            rgba(12, 16, 29, 0.96)
-        );
+    background: linear-gradient(
+        145deg,
+        rgba(27,34,59,0.96),
+        rgba(12,16,29,0.96)
+    );
     border: 1px solid rgba(255,255,255,0.08);
     transition: all 0.35s ease;
-}
-
-.feature-card::before {
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    right: -85px;
-    top: -85px;
-    border-radius: 50%;
-    background: rgba(120, 135, 255, 0.12);
-    filter: blur(35px);
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
     border-color: rgba(137,151,255,0.55);
-    box-shadow:
-        0 22px 45px rgba(0,0,0,0.35),
-        0 0 28px rgba(105,120,255,0.10);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.35);
 }
 
 .feature-number {
-    position: relative;
     color: #8f9cff;
     font-size: 11px;
     letter-spacing: 2px;
@@ -203,30 +172,26 @@ footer {
 }
 
 .feature-card h3 {
-    position: relative;
     color: #eef0ff;
     font-size: 19px;
     margin-bottom: 13px;
 }
 
 .feature-card p {
-    position: relative;
     color: #858fa6;
     font-size: 14px;
     line-height: 1.75;
 }
 
-/* =====================================================
-   WORKFLOW STRIP
-===================================================== */
+/* WORKFLOW */
 
 .workflow {
     margin-top: 45px;
-    padding: 22px 25px;
+    padding: 22px;
     border-radius: 18px;
+    text-align: center;
     background: rgba(17,22,39,0.65);
     border: 1px solid rgba(255,255,255,0.07);
-    text-align: center;
 }
 
 .workflow-text {
@@ -239,33 +204,23 @@ footer {
     font-weight: 700;
 }
 
-/* =====================================================
-   UPLOAD SECTION
-===================================================== */
+/* UPLOAD CARD */
 
 .upload-card {
     margin-top: 50px;
     padding: 34px;
     border-radius: 24px;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(22,28,48,0.96),
-            rgba(12,16,29,0.96)
-        );
+    background: linear-gradient(
+        145deg,
+        rgba(22,28,48,0.96),
+        rgba(12,16,29,0.96)
+    );
     border: 1px solid rgba(255,255,255,0.10);
     box-shadow: 0 25px 80px rgba(0,0,0,0.35);
 }
 
-.upload-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
 .upload-title {
-    color: #ffffff;
+    color: white;
     font-size: 23px;
     font-weight: 700;
 }
@@ -285,9 +240,7 @@ footer {
     border: 1px solid rgba(74,222,128,0.18);
 }
 
-/* =====================================================
-   FILE UPLOADER
-===================================================== */
+/* FILE UPLOADER */
 
 [data-testid="stFileUploader"] {
     background: rgba(255,255,255,0.025);
@@ -296,19 +249,11 @@ footer {
     padding: 22px;
 }
 
-[data-testid="stFileUploader"]:hover {
-    border-color: #8e9cff;
-    background: rgba(124,140,255,0.06);
-}
-
-/* =====================================================
-   FILE INFO
-===================================================== */
+/* FILE INFO */
 
 .file-info {
     display: flex;
     gap: 12px;
-    flex-wrap: wrap;
     margin: 20px 0;
 }
 
@@ -321,9 +266,7 @@ footer {
     border: 1px solid rgba(124,140,255,0.18);
 }
 
-/* =====================================================
-   THANK YOU
-===================================================== */
+/* THANK YOU */
 
 .thank-you {
     text-align: center;
@@ -331,14 +274,11 @@ footer {
     padding: 18px;
     border-radius: 14px;
     color: #9eeac2;
-    font-size: 14px;
     background: rgba(74,222,128,0.06);
     border: 1px solid rgba(74,222,128,0.15);
 }
 
-/* =====================================================
-   BUTTONS
-===================================================== */
+/* BUTTON */
 
 .stButton > button {
     width: 100%;
@@ -349,7 +289,6 @@ footer {
     color: white;
     font-size: 16px;
     font-weight: 700;
-    transition: all 0.25s ease;
 }
 
 .stButton > button:hover {
@@ -357,25 +296,22 @@ footer {
     box-shadow: 0 16px 38px rgba(112,101,255,0.35);
 }
 
-/* =====================================================
-   ANALYSIS RESULT
-===================================================== */
+/* ANALYSIS */
 
 .analysis-header {
     margin-top: 55px;
     padding: 30px;
     border-radius: 20px;
-    background:
-        linear-gradient(
-            120deg,
-            rgba(73,88,196,0.32),
-            rgba(112,61,155,0.25)
-        );
+    background: linear-gradient(
+        120deg,
+        rgba(73,88,196,0.32),
+        rgba(112,61,155,0.25)
+    );
     border: 1px solid rgba(144,155,255,0.20);
 }
 
 .analysis-header h2 {
-    color: #ffffff;
+    color: white;
 }
 
 .analysis-header p {
@@ -387,12 +323,11 @@ footer {
     padding: 30px;
     border-radius: 20px;
     text-align: center;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(77,93,205,0.28),
-            rgba(123,65,174,0.25)
-        );
+    background: linear-gradient(
+        135deg,
+        rgba(77,93,205,0.28),
+        rgba(123,65,174,0.25)
+    );
     border: 1px solid rgba(144,155,255,0.20);
 }
 
@@ -400,11 +335,10 @@ footer {
     color: #aeb9d0;
     font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .score-number {
-    color: #ffffff;
+    color: white;
     font-size: 54px;
     font-weight: 800;
     margin: 8px 0;
@@ -424,10 +358,6 @@ footer {
     line-height: 1.8;
 }
 
-/* =====================================================
-   FOOTER
-===================================================== */
-
 .custom-footer {
     text-align: center;
     color: #5f687d;
@@ -444,37 +374,22 @@ footer {
 # =====================================================
 
 st.markdown(
-    """
-    <div class="navbar">
-        <div class="logo">Resume<span>IQ</span></div>
-        <div class="nav-badge">AI Resume Intelligence Platform</div>
-    </div>
-    """,
+    '<div class="navbar"><div class="logo">Resume<span>IQ</span></div><div class="nav-badge">AI Resume Intelligence Platform</div></div>',
     unsafe_allow_html=True
 )
 
 
 # =====================================================
-# WELCOME HERO
+# WELCOME
 # =====================================================
 
 st.markdown(
-    """
-    <div class="welcome-label">
-        WELCOME TO RESUMEIQ
-    </div>
+    '<div class="welcome-label">WELCOME TO RESUMEIQ</div>',
+    unsafe_allow_html=True
+)
 
-    <div class="hero">
-        <h1>Turn your resume into<br><span>career intelligence.</span></h1>
-
-        <p>
-            Upload your resume and let AI uncover your strengths,
-            skill gaps, ATS opportunities, and the next steps in your career.
-        </p>
-
-        <div class="hero-line"></div>
-    </div>
-    """,
+st.markdown(
+    '<div class="hero"><h1>Turn your resume into<br><span>career intelligence.</span></h1><p>Upload your resume and let AI uncover your strengths, skill gaps, ATS opportunities, and the next steps in your career.</p><div class="hero-line"></div></div>',
     unsafe_allow_html=True
 )
 
@@ -484,12 +399,7 @@ st.markdown(
 # =====================================================
 
 st.markdown(
-    """
-    <div class="section-heading">
-        <h2>Make your next career move with confidence.</h2>
-        <p>Everything you need to understand and improve your resume.</p>
-    </div>
-    """,
+    '<div class="section-heading"><h2>Make your next career move with confidence.</h2><p>Everything you need to understand and improve your resume.</p></div>',
     unsafe_allow_html=True
 )
 
@@ -497,46 +407,19 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown(
-        """
-        <div class="feature-card">
-            <div class="feature-number">01 / ANALYZE</div>
-            <h3>Understand Your Profile</h3>
-            <p>
-                Get a clear AI-powered view of your resume,
-                professional strengths, weaknesses, and overall impact.
-            </p>
-        </div>
-        """,
+        '<div class="feature-card"><div class="feature-number">01 / ANALYZE</div><h3>Understand Your Profile</h3><p>Get a clear AI-powered view of your resume, professional strengths, weaknesses, and overall impact.</p></div>',
         unsafe_allow_html=True
     )
 
 with col2:
     st.markdown(
-        """
-        <div class="feature-card">
-            <div class="feature-number">02 / DISCOVER</div>
-            <h3>Find Your Skill Gaps</h3>
-            <p>
-                Discover the skills you already have and identify
-                what you should learn to reach your career goals.
-            </p>
-        </div>
-        """,
+        '<div class="feature-card"><div class="feature-number">02 / DISCOVER</div><h3>Find Your Skill Gaps</h3><p>Discover the skills you already have and identify what you should learn to reach your career goals.</p></div>',
         unsafe_allow_html=True
     )
 
 with col3:
     st.markdown(
-        """
-        <div class="feature-card">
-            <div class="feature-number">03 / IMPROVE</div>
-            <h3>Become ATS Ready</h3>
-            <p>
-                Improve your resume structure and content
-                to perform better in modern hiring systems.
-            </p>
-        </div>
-        """,
+        '<div class="feature-card"><div class="feature-number">03 / IMPROVE</div><h3>Become ATS Ready</h3><p>Improve your resume structure and content to perform better in modern hiring systems.</p></div>',
         unsafe_allow_html=True
     )
 
@@ -546,17 +429,7 @@ with col3:
 # =====================================================
 
 st.markdown(
-    """
-    <div class="workflow">
-        <div class="workflow-text">
-            Upload your resume
-            <span>→</span>
-            AI analyzes your profile
-            <span>→</span>
-            You discover your next career move
-        </div>
-    </div>
-    """,
+    '<div class="workflow"><div class="workflow-text">Upload your resume <span>→</span> AI analyzes your profile <span>→</span> Discover your next career move</div></div>',
     unsafe_allow_html=True
 )
 
@@ -579,27 +452,7 @@ client = Groq(api_key=api_key)
 # =====================================================
 
 st.markdown(
-    """
-    <div class="upload-card">
-
-        <div class="upload-header">
-
-            <div>
-                <div class="upload-title">Upload your resume</div>
-
-                <div class="upload-subtitle">
-                    Upload a PDF and let ResumeIQ analyze your professional profile.
-                </div>
-            </div>
-
-            <div class="secure-badge">
-                Secure Analysis
-            </div>
-
-        </div>
-
-    </div>
-    """,
+    '<div class="upload-card"><div class="upload-title">Upload your resume</div><div class="upload-subtitle">Upload a PDF and let ResumeIQ analyze your professional profile.</div><br><div class="secure-badge">Secure Analysis</div></div>',
     unsafe_allow_html=True
 )
 
@@ -610,7 +463,7 @@ uploaded_file = st.file_uploader(
 
 
 # =====================================================
-# RESUME PROCESSING
+# PROCESS RESUME
 # =====================================================
 
 if uploaded_file:
@@ -620,7 +473,6 @@ if uploaded_file:
     resume_text = ""
 
     for page in reader.pages:
-
         text = page.extract_text()
 
         if text:
@@ -629,25 +481,14 @@ if uploaded_file:
     page_count = len(reader.pages)
 
     st.markdown(
-        f"""
-        <div class="file-info">
-            <div class="file-tag">PDF Document</div>
-            <div class="file-tag">{page_count} Page(s)</div>
-            <div class="file-tag">AI Analysis Ready</div>
-        </div>
-        """,
+        f'<div class="file-info"><div class="file-tag">PDF Document</div><div class="file-tag">{page_count} Page(s)</div><div class="file-tag">AI Analysis Ready</div></div>',
         unsafe_allow_html=True
     )
 
     st.success("Resume successfully uploaded.")
 
     st.markdown(
-        """
-        <div class="thank-you">
-            Thank you for trusting ResumeIQ with your resume.
-            Your AI-powered analysis is ready to begin.
-        </div>
-        """,
+        '<div class="thank-you">Thank you for trusting ResumeIQ with your resume. Your AI-powered analysis is ready to begin.</div>',
         unsafe_allow_html=True
     )
 
@@ -662,7 +503,7 @@ Analyze this resume:
 
 {resume_text}
 
-Provide a professional and structured analysis with:
+Provide a professional structured analysis with:
 
 1. OVERALL RESUME SCORE out of 100
 2. PROFESSIONAL SUMMARY
@@ -700,58 +541,21 @@ Be specific, honest, practical, and professional.
             score = score_match.group(1) if score_match else "—"
 
             st.markdown(
-                """
-                <div class="analysis-header">
-                    <h2>Resume Analysis Report</h2>
-                    <p>
-                        AI-generated insights based on your uploaded resume.
-                    </p>
-                </div>
-                """,
+                '<div class="analysis-header"><h2>Resume Analysis Report</h2><p>AI-generated insights based on your uploaded resume.</p></div>',
                 unsafe_allow_html=True
             )
 
             col1, col2 = st.columns(2)
 
             with col1:
-
                 st.markdown(
-                    f"""
-                    <div class="score-card">
-                        <div class="score-title">
-                            Overall Resume Score
-                        </div>
-
-                        <div class="score-number">
-                            {score}
-                        </div>
-
-                        <div class="score-subtitle">
-                            Out of 100
-                        </div>
-                    </div>
-                    """,
+                    f'<div class="score-card"><div class="score-title">Overall Resume Score</div><div class="score-number">{score}</div><div class="score-subtitle">Out of 100</div></div>',
                     unsafe_allow_html=True
                 )
 
             with col2:
-
                 st.markdown(
-                    """
-                    <div class="score-card">
-                        <div class="score-title">
-                            Analysis Status
-                        </div>
-
-                        <div class="score-number">
-                            AI
-                        </div>
-
-                        <div class="score-subtitle">
-                            Personalized career insights generated
-                        </div>
-                    </div>
-                    """,
+                    '<div class="score-card"><div class="score-title">Analysis Status</div><div class="score-number">AI</div><div class="score-subtitle">Personalized career insights generated</div></div>',
                     unsafe_allow_html=True
                 )
 
@@ -780,10 +584,6 @@ Be specific, honest, practical, and professional.
 # =====================================================
 
 st.markdown(
-    """
-    <div class="custom-footer">
-        ResumeIQ · Generative AI powered resume intelligence
-    </div>
-    """,
+    '<div class="custom-footer">ResumeIQ · Generative AI powered resume intelligence</div>',
     unsafe_allow_html=True
 )
